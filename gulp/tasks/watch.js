@@ -1,8 +1,7 @@
 var gulp = require('gulp');
 
-gulp.task('watch', ['lint'], function() {
+gulp.task('watch', function() {
   gulp.watch(['app/scripts/*.js', 'app/scripts/**/*.js'],[
-    'lint',
     'scripts'
   ]);
 

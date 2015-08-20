@@ -1,4 +1,5 @@
 var express = require('express');
+var reload = require('connect-livereload');
 var app = express();
 
 var OPTIONS = {
@@ -6,6 +7,8 @@ var OPTIONS = {
 };
 
 app.use(express.static('public'));
+app.use(reload);
+
 
 var server = app.listen(OPTIONS.port, function () {
   var host = server.address().address;

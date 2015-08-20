@@ -11,9 +11,4 @@ gulp.task('dev', function() {
     ['views', 'lint', 'scripts', 'styles'],
     'watch'
   );
-
-  gulp.watch(['app.js'], function() {
-    server.stop();
-    server.run(['app.js']);
-  });
 });

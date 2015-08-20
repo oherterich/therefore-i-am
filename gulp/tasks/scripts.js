@@ -1,12 +1,10 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
-var concat = require('gulp-concat');
 var source = require('vinyl-source-stream');
 var server = require('gulp-express');
 var babelify = require('babelify');
 
 gulp.task('scripts', function() {
-
   browserify('app/scripts/app.js', { debug: true })
     .transform(babelify)
     .bundle()
